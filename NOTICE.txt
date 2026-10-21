@@ -1,0 +1,31 @@
+LocalAI EVGA RTX 3090 / RTX 5070 Ti autostart preparation, 2026-10-21.
+
+Based on https://github.com/impacifist/Windows-GPU-UNLOCK
+commit 9c541591317b00e580aec818988df8a795dd0069, GPL-2.0-only.
+The GPU transaction core originates from Zagitta/gpu-unlock and the UEFI
+port from rough2515-hub/rtx3080-unlock-public. Original notices remain in
+THIRD_PARTY_NOTICES.md, LICENSE and LICENSES/.
+
+Local changes: exact EVGA subsystem, target PCI bus and BAR, actual PROM
+digest, separate RTX 5070 Ti GOP parent/path/ADR, output folder/banners,
+board-specific ROM geometry in host fixtures, captured-selector/two-GOP
+tests, portable verified LLVM toolchain, synthetic CUDA 13.1 benchmark,
+complete matrix verification, USB preparation and German instructions.
+No GPU transaction algorithm or payload contents were changed.
+
+EDK2 headers: BSD-2-Clause-Patent, original notices in source files.
+Five generated/extracted NVIDIA firmware assets are local-use copies
+checked against the upstream pinned hashes; see NVIDIA-LICENSE and
+FIRMWARE-NOTICE.txt next to ASSETS. They are excluded from SOURCE.zip.
+The local PROM/ROM captures are excluded from SOURCE.zip as well.
+
+The preceding manual variant was validated by one successful hardware unlock
+and synthetic FP16/BF16 measurements on this machine. This separate autostart
+variant changes the arming UI to a five-second cancellable countdown and adds
+Windows loader preparation and handoff. The GPU transaction core, port,
+ownership and firmware payloads are unchanged. New EFI image and handoff have
+only passed host mocks and PE validation, not an actual hardware boot.
+Nothing in this preparation was installed to USB, internal ESP or firmware
+boot settings. See README.md and VALIDATION.json for the exported status. The export makes
+the Windows ESP GUID and sector geometry explicit local build inputs; no
+personal Windows partition profile is distributed.

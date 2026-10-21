@@ -1,0 +1,6 @@
+PASS exact captured card: no-key countdown, U cannot shorten it, firmware-owner handoff, Windows starts after full cleanup; SS1 untouched
+PASS Esc at start/middle/end, missing/failing keyboard, timer error, non-cold selectors and changed countdown state: zero GPU effects, Windows normally
+PASS Windows loader missing/duplicate/USB/wrong partition/malformed path/wrong image/security failure: rejected before driver release or GPU writes
+PASS precheck rejection boots Windows without unlock; post-release/transaction/cleanup failures retain stop and never start Windows
+PASS returning Windows loader stops without retry/reset; missing image-start API rejects before effects
+PASS AUTOSTART HOST INTEGRATION; hardware and Windows execution simulated; no USB, firmware settings, GPU or Strata accessed

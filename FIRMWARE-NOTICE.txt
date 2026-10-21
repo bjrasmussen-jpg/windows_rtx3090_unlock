@@ -1,0 +1,8 @@
+Local-use preparation, not a public firmware distribution.
+Five NVIDIA firmware files were generated/extracted for the preceding manual
+experiment and verified against its pinned assets.json. Their contents have
+not been modified for this autostart preparation. The original NVIDIA license
+is retained at ASSETS/NVIDIA-LICENSE and LICENSES/NVIDIA-Driver.txt.
+These binary firmware files and the captured GPU PROM/ROM are excluded from
+SOURCE.zip. Source licenses do not imply a separate firmware redistribution
+permission. See NOTICE.txt and THIRD_PARTY_NOTICES.md for source provenance.

@@ -1,0 +1,14 @@
+{
+  "SourceExportHostTestsPassed": true,
+  "HardwareAccessDuringExportTest": false,
+  "UefiAndGpuAndWindowsExecution": "simulated",
+  "WindowsPartitionProfile": "dummy; real profile omitted",
+  "AutostartHardwareBootTested": false,
+  "Installed": false,
+  "SourceArchiveFiles": 736,
+  "OriginalGpuCoreAndSs1Policy": "unchanged",
+  "ExportChanges": [
+    "Explicit local Windows ESP build inputs",
+    "Portable explicit build/tool/fixture paths"
+  ]
+}

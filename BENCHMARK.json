@@ -1,0 +1,41 @@
+{
+  "Unlock": "Manual USB UEFI, SS0=0x88888888, SS1 preserved at 6",
+  "UEFI": "FINAL status=0; attempted=1; driver_release=1; clean=1",
+  "Driver": "617.42",
+  "PowerLimitWatts": 420,
+  "Benchmark": "4096x4096 cuBLAS GEMM; FP16/BF16 inputs with FP32 accumulation; FP32 pedantic reference; 30 timing samples after 2 s warmup; 3 fresh processes",
+  "Correctness": "Entire final output matrix checked against exact 4096 reference after each format in every process",
+  "IdenticalBinaryAndCublasHashesVerified": true,
+  "Comparison": [
+    {
+      "Name": "fp32_pedantic",
+      "BeforeTflops": 27.756743,
+      "AfterTflops": 27.509272,
+      "Speedup": 0.9910842925627117,
+      "GainPercent": -0.8915707437288312
+    },
+    {
+      "Name": "fp16_tensor_fp32_accumulate",
+      "BeforeTflops": 69.30944000000001,
+      "AfterTflops": 130.435105,
+      "Speedup": 1.8819240928796996,
+      "GainPercent": 88.19240928796997
+    },
+    {
+      "Name": "bf16_tensor_fp32_accumulate",
+      "BeforeTflops": 69.237931,
+      "AfterTflops": 131.32850299999998,
+      "Speedup": 1.896771048805603,
+      "GainPercent": 89.67710488056031
+    }
+  ],
+  "Limitations": [
+    "This verifies synthetic throughput and the checked matrices; it is not a long-term stability test.",
+    "No Strata inference or model benchmark was run.",
+    "Baseline: Strata model resident but idle; after: model not resident. Benchmark matrices and math were identical.",
+    "No internal-disk boot automation has been installed."
+  ],
+  "StrataConfigUnchanged": true,
+  "Hardware": "EVGA RTX 3090 24GB, separate RTX 5070 Ti display",
+  "Phase": "Earlier manual USB unlock; separate from prepared autostart"
+}
