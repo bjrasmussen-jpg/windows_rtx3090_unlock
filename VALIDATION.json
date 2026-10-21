@@ -5,7 +5,7 @@
   "WindowsPartitionProfile": "dummy; real profile omitted",
   "AutostartHardwareBootTested": false,
   "Installed": false,
-  "SourceArchiveFiles": 736,
+  "SourceArchiveFiles": 739,
   "OriginalGpuCoreAndSs1Policy": "unchanged",
   "ExportChanges": [
     "Explicit local Windows ESP build inputs",

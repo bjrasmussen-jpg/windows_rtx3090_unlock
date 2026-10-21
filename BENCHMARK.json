@@ -37,5 +37,6 @@
   ],
   "StrataConfigUnchanged": true,
   "Hardware": "EVGA RTX 3090 24GB, separate RTX 5070 Ti display",
-  "Phase": "Earlier manual USB unlock; separate from prepared autostart"
+  "Phase": "Earlier manual USB unlock; separate from prepared autostart",
+  "SeparateStrataObservation": "STRATA-OBSERVATION.json; observational, not a controlled unlock A/B test"
 }

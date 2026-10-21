@@ -1,0 +1,74 @@
+{
+  "Kind": "observational real-workload comparison from another local session",
+  "BeforeDate": "2026-10-20",
+  "AfterDate": "2026-10-21",
+  "ContextTokens": [
+    70000,
+    100000
+  ],
+  "MinimumGeneratedTokens": 100,
+  "Hardware": "RTX 5070 Ti + EVGA RTX 3090; RTX 3090 at PCIe 4.0 x4",
+  "SourceSnapshotSha256": {
+    "Before": "394ed8873758071ddbdb5d7d062dce5f9d47aba8323affa7c2294ccfdf27968b",
+    "After": "334c83bb3089b3abea57fa3f942bd4bbc9195cdedf27a489673db5af7ac77739"
+  },
+  "Groups": [
+    {
+      "Selection": "all matching requests",
+      "Before": {
+        "Requests": 205,
+        "GeneratedTokens": 183883,
+        "DecodeSeconds": 1994.7178,
+        "DecodeWeightedTokensPerSecond": 92.18496972353684,
+        "DecodeMedianTokensPerSecond": 90.3,
+        "ReusePercent": 97.56667515522726,
+        "MeanPromptTokens": 84954.12195121951,
+        "MeanOutputTokens": 896.990243902439
+      },
+      "After": {
+        "Requests": 3,
+        "GeneratedTokens": 4142,
+        "DecodeSeconds": 40.0937,
+        "DecodeWeightedTokensPerSecond": 103.3080010076396,
+        "DecodeMedianTokensPerSecond": 109.3,
+        "ReusePercent": 66.32232326385652,
+        "MeanPromptTokens": 82217.66666666667,
+        "MeanOutputTokens": 1380.6666666666667
+      },
+      "GainPercent": 12.06599223003575
+    },
+    {
+      "Selection": "warm cache >90% reused",
+      "Before": {
+        "Requests": 200,
+        "GeneratedTokens": 179067,
+        "DecodeSeconds": 1941.7866,
+        "DecodeWeightedTokensPerSecond": 92.21765151742215,
+        "DecodeMedianTokensPerSecond": 90.3,
+        "ReusePercent": 99.56294601800815,
+        "MeanPromptTokens": 85020.39,
+        "MeanOutputTokens": 895.335
+      },
+      "After": {
+        "Requests": 2,
+        "GeneratedTokens": 2705,
+        "DecodeSeconds": 26.9445,
+        "DecodeWeightedTokensPerSecond": 100.39154558444208,
+        "DecodeMedianTokensPerSecond": 101.35,
+        "ReusePercent": 98.26873633370978,
+        "MeanPromptTokens": 83234,
+        "MeanOutputTokens": 1352.5
+      },
+      "GainPercent": 8.86369792823849
+    }
+  ],
+  "ControlledUnlockABTest": false,
+  "TotalResponseTimeImprovementProven": false,
+  "Limitations": [
+    "Only three matching requests in the after snapshot.",
+    "Different request content, cache reuse, speculative decoding acceptance and a fresh engine start may affect results.",
+    "The comparison does not isolate the unlock as the cause.",
+    "Decode throughput only; no claim of a 10% reduction in total answer time.",
+    "Autostart variant was not used or validated by this observation."
+  ]
+}
